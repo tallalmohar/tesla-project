@@ -4,7 +4,9 @@ import Image from "next/image";
 import { useState } from "react";
 import Dropdown from "./DropDown";
 
+
 export default function Header() {
+	//use state for the different buttons
 	const [openDropdown, setOpenDropdown] = useState<null | "vehicle" | "energy" | "charging" | "discover" | "shop">(null);
 
   function shopClick() {
@@ -82,6 +84,7 @@ export default function Header() {
 		</a>
         </div>
       </div>
+	  {/* I kinda messed up should've made another componenets for everything that is happening under here */}
 	  {openDropdown && 
 	  	(
 	<div
