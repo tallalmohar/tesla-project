@@ -350,12 +350,53 @@ export default function Header() {
 			</div>
 			</section>
 		)}
+		{openDropdown === "shop" && (
+			<section className="flex">
+				<div className="flex gap-2 flex-row flex-wrap w-[721px] h-[367px]">
+				<div className="">
+					<Image alt="model s" src="/charger2.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Charging</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				<div className="">
+					<Image alt="model s" src="/tire.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Vehicle Accessories</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				<div className="">
+					<Image alt="model s" src="/cap.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Apparel</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				<div className="">
+					<Image alt="model s" src="/bagpack.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Lifestyle</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				
+				</div>
+			</section>
+		)}
+		
 		</Dropdown>
 	</div>
 	)}
-	
-	  
-	  
     </>
   );
 };
