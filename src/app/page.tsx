@@ -67,10 +67,13 @@ export default function Home() {
       </div>
    
       </div>
-      <div className="m-10 ">
-          <ScrollCard src="/Homepage-Card-Model-Y.avif" carType="Midsize SUV" carName="Model Y" price="From $37,490 After Federal Tax Credit" ></ScrollCard>
+      <div className="m-10 h-[580px] flex flex-row gap-3 overflow-x-auto whitespace-nowrap no-scrollbar ">
+          <ScrollCard  src="/Homepage-Card-Model-Y.avif" carType="Midsize SUV" carName="Model Y" price="From $37,490 After Federal Tax Credit" ></ScrollCard>
           <ScrollCard src="/Homepage-Card-Model-3-Desktop.avif" carType="Sport Sedan" carName="Model 3" price="Lease From $349/mon With Zero Down" ></ScrollCard>
           <ScrollCard src="/Homepage-Card-Cybertruck-Desktop.avif" carType="Utility Truck" carName="Cybertruck" price="Lease From 799/mon" ></ScrollCard>
+          <ScrollCard src="/Homepage-Card-Model-S-Desktop.avif" carType="Luxury SUV" carName="Model X" price="Free Supercarging on Inventory" ></ScrollCard>
+          <ScrollCard src="/Homepage-Card-Model-X-Desktop.avif" carType="Luxury Sedan" carName="Model S" price="Free Supercarging on Inventory" ></ScrollCard>
+       
       </div>
       
     </>
