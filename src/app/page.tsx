@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Header from "./components/Header";
 import ScrollCard from "./components/ScrollCard";
+import InfoBox from "./components/InfoBox";
 import { useState } from "react";
 
   const galleryItems = [
@@ -74,8 +75,11 @@ export default function Home() {
           <ScrollCard src="/Homepage-Card-Model-S-Desktop.avif" carType="Luxury SUV" carName="Model X" price="Free Supercarging on Inventory" ></ScrollCard>
           <ScrollCard src="/Homepage-Card-Model-X-Desktop.avif" carType="Luxury Sedan" carName="Model S" price="Free Supercarging on Inventory" ></ScrollCard>
       </div>
-      
-      
+      <div className="flex flex-row justify-center gap-5 m-10">
+        <InfoBox src="/Homepage-Grid-Compare.avif" title="Compare Model" p="Find the Tesla vehicle that’s right for you." btnP="Compare Models"></InfoBox>
+
+        <InfoBox src="/Homepage-Grid-Compare.avif" title="American Heroes" p="$1,000 off for military, first responders, teachers and students." btnP="Learn More"></InfoBox>
+      </div>
     </>
   );
 }
