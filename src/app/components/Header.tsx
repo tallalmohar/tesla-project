@@ -1,8 +1,12 @@
 "use client";
-import Link from "next/link";
+import React from "react";
 import Image from "next/image";
+import { useState } from "react";
+import Dropdown from "./DropDown";
 
 export default function Header() {
+	const [openDropdown, setOpenDropdown] = useState<null | "vehicle" | "energy" | "charging" | "discover" | "shop">(null);
+
   function shopClick() {
     window.open("https://shop.tesla.com/");
   }
@@ -16,21 +20,27 @@ export default function Header() {
           alt="Tesla Logo Futuristic Font"
         ></Image>
         <div className="flex">
-          <button className="px-3  hover:bg-gray-200 hover:cursor-pointer rounded transition">
-            Vehicles
-          </button>
-          <button className="px-3 hover:bg-gray-200 hover:cursor-pointer rounded transition">
+			<button className="px-3  hover:bg-gray-200 hover:cursor-pointer rounded transition"
+			onMouseEnter={() => setOpenDropdown("vehicle")}
+			 >
+				Vehicles
+			</button>
+          <button className="px-3 hover:bg-gray-200 hover:cursor-pointer rounded transition"
+			onMouseEnter={() => setOpenDropdown("energy")}>
             Energy
           </button>
-          <button className="px-3  hover:bg-gray-200 hover:cursor-pointer rounded transition">
+          <button className="px-3  hover:bg-gray-200 hover:cursor-pointer rounded transition"
+		  onMouseEnter={() => setOpenDropdown("charging")}>
             Charging
           </button>
-          <button className="px-3  hover:bg-gray-200 hover:cursor-pointer rounded transition">
+          <button className="px-3  hover:bg-gray-200 hover:cursor-pointer rounded transition"
+		  onMouseEnter={() => setOpenDropdown("discover")}>
             Discover
           </button>
           <button
             className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer rounded transition"
             onClick={shopClick}
+			onMouseEnter={() => setOpenDropdown("shop")}
           >
             Shop
           </button>
@@ -46,7 +56,8 @@ export default function Header() {
 					alt="Support Button"
 					></Image>
 				</button>
-		  </a>
+            
+      </a>
 		  <a>
 			<button className="px-1 py-1 hover:bg-gray-200 hover:cursor-pointer rounded transition">
 				<Image
@@ -71,6 +82,280 @@ export default function Header() {
 		</a>
         </div>
       </div>
+	  {openDropdown && 
+	  	(
+	<div
+		className="absolute left-0 w-full z-50"
+		onMouseEnter={() => setOpenDropdown(openDropdown)}
+		onMouseLeave={() => setOpenDropdown(null)}
+	>
+		<Dropdown>
+		{openDropdown === "vehicle" && (
+			<>
+			<section className="flex ">
+			<div className="flex gap-3 flex-row flex-wrap w-[721px] h-[367px]">
+				<div className="">
+					<Image alt="model s" src="/modelS.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Model S</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				<div className="">
+					<Image alt="model s" src="/model3.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Model 3</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				<div className="">
+					<Image alt="model s" src="/modely.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Model Y</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				<div className="">
+					<Image alt="model s" src="/modelX.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Model X</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				<div className="">
+					<Image alt="model s" src="/cyberTruck.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Cybertruck</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				<div className="">
+					<Image alt="model s" src="/inventory.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Inventory</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div className="border-r"></div>
+			<div className="ml-10">
+				<ul>
+				{[
+				"Help Me Choose",
+				"Demo Drive",
+				"Trade-in",
+				"Compare",
+				"WorkShops",
+				"Help Me Charge",
+				"Fleet",
+				"Semi",
+				"Roadster",
+				"Federal Tax Credit",
+				"We, Robot",
+				].map((item) => (
+				<li key={item} className="pt-3 hover:underline font-bold text-sm">
+					<a href="#">{item}</a>
+				</li>
+				))}
+  			</ul>
+			</div>
+			</section>
+			</>
+			)}
+		{openDropdown === "energy" && 
+		(
+			<>
+			<section className="flex ">
+			<div className="flex gap-2 flex-row flex-wrap w-[721px] h-[367px]">
+				<div className="">
+					<Image alt="model s" src="/solar.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Solar Panels</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				<div className="">
+					<Image alt="model s" src="/solarRoof.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Solar Roof</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				<div className="">
+					<Image alt="model s" src="/powerWall.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Powerwall</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				<div className="">
+					<Image alt="model s" src="/mega.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Megapack</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a>
+					</div>
+					</div>
+				</div>
+				
+			</div>
+			<div className="border-r"></div>
+			<div className="ml-10">
+				<ul>
+				{[
+				"Schedule a Consultation",
+				"Why Solar",
+				"Incentives",
+				"Support",
+				"Partner with Tesla",
+				"Commercial",
+				"Utilities"
+				].map((item) => (
+				<li key={item} className="pt-3 hover:underline font-bold text-sm">
+					<a href="#">{item}</a>
+				</li>
+				))}
+  			</ul>
+			</div>
+			</section>
+			</>
+		)}
+		{openDropdown === "charging" && 
+		(
+			<>
+			<section className="flex ">
+			<div className="flex gap-2 flex-row flex-wrap w-[721px] h-[367px]">
+				<div className="">
+					<Image alt="model s" src="/charger1.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Solar Panels</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				<div className="">
+					<Image alt="model s" src="/charger2.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Solar Roof</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				<div className="">
+					<Image alt="model s" src="/charger3.avif" width={220} height={123}></Image>
+					<div className="flex items-center flex-col">
+					<h1 className="font-bold">Powerwall</h1>
+					<div className="flex gap-3 text-xs text-gray-500">
+					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					</div>
+					</div>
+				</div>
+				
+			</div>
+			<div className="border-r"></div>
+			<div className="ml-10">
+				<ul>
+				{[
+				"Help Me Charge",
+				"Charging Calculator",
+				"Charging with NACS",
+				"Supercharger Voting",
+				"Host a Supercharger",
+				"Commercial Charging",
+				"Host Wall Connector"
+				
+				].map((item) => (
+				<li key={item} className="pt-3 hover:underline font-bold text-sm">
+					<a href="#">{item}</a>
+				</li>
+				))}
+  			</ul>
+			</div>
+			</section>
+			</>
+		)}
+		{openDropdown === "discover" && (
+			<section className="flex">
+				
+			<div className="ml-10 mr-5">
+				<h1>Resources</h1>
+				<ul>
+				{[
+				"Demo Drive",
+				"Insurance",
+				"American Heroes",
+				"Learn",
+				"Video Guides",
+				"Customer Stories",
+				"Events",
+				"Workshops"
+				
+				
+				].map((item) => (
+				<li key={item} className="pt-3 hover:underline font-bold text-sm">
+					<a href="#">{item}</a>
+				</li>
+				))}
+  			</ul>
+			</div>
+			
+			<div className="ml-10">
+				<h1>Location Services</h1>
+				<ul>
+				{[
+				"Find us",
+				"Find a Collision Center",
+				"Find a Certified Installer"
+				].map((item) => (
+				<li key={item} className="pt-3 hover:underline font-bold text-sm">
+					<a href="#">{item}</a>
+				</li>
+				))}
+  			</ul>
+			</div>
+			<div className="ml-10">
+				<h1>Company</h1>
+				<ul>
+				{[
+				"About",
+				"Careers",
+				"Investor Relations"
+				
+				].map((item) => (
+				<li key={item} className="pt-3 hover:underline font-bold text-sm">
+					<a href="#">{item}</a>
+				</li>
+				))}
+  			</ul>
+			</div>
+			</section>
+		)}
+		</Dropdown>
+	</div>
+	)}
+	
+	  
+	  
     </>
   );
-}
+};
