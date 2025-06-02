@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Header from "./components/Header";
+import ScrollCard from "./components/ScrollCard";
 import { useState } from "react";
 
   const galleryItems = [
@@ -40,8 +41,8 @@ export default function Home() {
         <h1 className="absolute pt-15 text-white text-6xl font-bold">{currentItem.text}</h1>
         <h1 className="absolute pt-30 text-white text-xl underline ">{currentItem.apr}</h1>
         <div className="absolute flex justify-centerw-[600px] flex-row z-10 gap-4">
-        <a  href={currentItem.link} className=" flex justify-center w-[170px] mt-40 p-4 bg-blue-600 text-white rounded hover:cursor-pointer hover:bg-blue-700 ">Order Now</a>
-        <a className=" flex justify-center w-[170px] mt-40 p-4  bg-white rounded hover:cursor-pointer hover:bg-gray-100  ">View Inventory</a>
+        <a  href={currentItem.link} className=" flex justify-center w-[170px] mt-40 p-2 bg-blue-600 text-white rounded hover:cursor-pointer hover:bg-blue-700 ">Order Now</a>
+        <a className=" flex justify-center w-[170px] mt-40 p-2  bg-white rounded hover:cursor-pointer hover:bg-gray-100  ">View Inventory</a>
         </div>
         <img
         src={currentItem.src}
@@ -65,6 +66,11 @@ export default function Home() {
         </button>
       </div>
    
+      </div>
+      <div className="m-10 ">
+          <ScrollCard src="/Homepage-Card-Model-Y.avif" carType="Midsize SUV" carName="Model Y" price="From $37,490 After Federal Tax Credit" ></ScrollCard>
+          <ScrollCard src="/Homepage-Card-Model-3-Desktop.avif" carType="Sport Sedan" carName="Model 3" price="Lease From $349/mon With Zero Down" ></ScrollCard>
+          <ScrollCard src="/Homepage-Card-Cybertruck-Desktop.avif" carType="Utility Truck" carName="Cybertruck" price="Lease From 799/mon" ></ScrollCard>
       </div>
       
     </>
