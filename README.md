@@ -22,7 +22,7 @@ This project is a pixel-perfect recreation of Tesla’s homepage, featuring:
 - [Tailwind CSS](https://tailwindcss.com/)
 
 ## 🚀 Getting Started
-Live Website:[TeslaFrontEndProj.app](https://teslafrontendproject.netlify.app/) 
+Live Website: [TeslaFrontEndProj.app](https://teslafrontendproject.netlify.app/) 
 
 
 Clone the repo and install dependencies:
