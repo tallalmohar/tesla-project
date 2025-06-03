@@ -3,7 +3,9 @@ import Image from "next/image";
 import Header from "./components/Header";
 import ScrollCard from "./components/ScrollCard";
 import InfoBox from "./components/InfoBox";
-import { useState } from "react";
+import { use, useState } from "react";
+
+
 
   const galleryItems = [
 		{
@@ -25,6 +27,9 @@ import { useState } from "react";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+
+
 
   const goNext = () =>{
     setCurrentIndex((prev) => (prev+1)% galleryItems.length)
@@ -66,15 +71,17 @@ export default function Home() {
           <Image src="/Homepage- backward.svg" width={20} height={20} alt="forward"></Image>
         </button>
       </div>
-   
+        
       </div>
       <div className="m-10 mr-0 ml-0 h-[580px] flex flex-row overflow-x-auto whitespace-nowrap no-scrollbar ">
-          <ScrollCard src="/Homepage-Card-Model-Y.avif" carType="Midsize SUV" carName="Model Y" price="From $37,490 After Federal Tax Credit" ></ScrollCard>
-          <ScrollCard src="/Homepage-Card-Model-3-Desktop.avif" carType="Sport Sedan" carName="Model 3" price="Lease From $349/mon With Zero Down" ></ScrollCard>
-          <ScrollCard src="/Homepage-Card-Cybertruck-Desktop.avif" carType="Utility Truck" carName="Cybertruck" price="Lease From 799/mon" ></ScrollCard>
-          <ScrollCard src="/Homepage-Card-Model-S-Desktop.avif" carType="Luxury SUV" carName="Model X" price="Free Supercarging on Inventory" ></ScrollCard>
-          <ScrollCard src="/Homepage-Card-Model-X-Desktop.avif" carType="Luxury Sedan" carName="Model S" price="Free Supercarging on Inventory" ></ScrollCard>
+          <ScrollCard href1="https://www.tesla.com/modely/design#overview" href2="https://www.tesla.com/modely" id="first" src="/Homepage-Card-Model-Y.avif" carType="Midsize SUV" carName="Model Y" price="From $37,490 After Federal Tax Credit" ></ScrollCard>
+          <ScrollCard href1="https://www.tesla.com/model3/design#overview" href2="https://www.tesla.com/model3" id="second" src="/Homepage-Card-Model-3-Desktop.avif" carType="Sport Sedan" carName="Model 3" price="Lease From $349/mon With Zero Down" ></ScrollCard>
+          <ScrollCard href1="https://www.tesla.com/cybertruck/design#overview" href2="https://www.tesla.com/cybertruck" id="third" src="/Homepage-Card-Cybertruck-Desktop.avif" carType="Utility Truck" carName="Cybertruck" price="Lease From 799/mon" ></ScrollCard>
+          <ScrollCard href1="https://www.tesla.com/modelx/design#overview" href2="https://www.tesla.com/modelx" id="fourth" src="/Homepage-Card-Model-S-Desktop.avif" carType="Luxury SUV" carName="Model X" price="Free Supercarging on Inventory" ></ScrollCard>
+          <ScrollCard href1="https://www.tesla.com/models/design#overview" href2="https://www.tesla.com/models" id="fifth" src="/Homepage-Card-Model-X-Desktop.avif" carType="Luxury Sedan" carName="Model S" price="Free Supercarging on Inventory" ></ScrollCard>
       </div>
+  
+       
       <div className="flex flex-row justify-center gap-5 m-10">
         <InfoBox src="/Homepage-Grid-Compare.avif" title="Compare Model" p="Find the Tesla vehicle that’s right for you." btnP="Compare Models"></InfoBox>
 
@@ -114,10 +121,10 @@ export default function Home() {
       </div>
 
       <div className="m-20 mb-4 mr-0 ml-0 h-[580px] flex flex-row overflow-x-auto whitespace-nowrap no-scrollbar ">
-          <ScrollCard src="/Homepage-Card-Solar-Panels-Desktop.avif" carType="" carName="Solar Panels" price="Use Solar Energy to Power Your Home and Charge Your Tesla" ></ScrollCard>
-          <ScrollCard src="/Homepage-Card-Powerwall-Desktop.avif" carType="" carName="Powerwall" price="Keep Your Lights On During Outages" ></ScrollCard>
-          <ScrollCard src="/Homepage-Card-Solar-Roof-Desktop.avif" carType="Utility Truck" carName="Solar Roof" price="Generate Clean Energy With Your Roof" ></ScrollCard>
-          <ScrollCard src="/Homepage-Card-Megapack-Desktop.avif" carType="Luxury SUV" carName="Megapack" price="Massive Batteries for Massive Energy Support" ></ScrollCard>
+          <ScrollCard href2="https://www.tesla.com/solarpanels" href1="https://www.tesla.com/energy/design?poi=solarpanels" id="2first" src="/Homepage-Card-Solar-Panels-Desktop.avif" carType="" carName="Solar Panels" price="Use Solar Energy to Power Your Home and Charge Your Tesla" ></ScrollCard>
+          <ScrollCard href2="https://www.tesla.com/powerwall" href1="https://www.tesla.com/powerwall/design" id="2second" src="/Homepage-Card-Powerwall-Desktop.avif" carType="" carName="Powerwall" price="Keep Your Lights On During Outages" ></ScrollCard>
+          <ScrollCard href2="https://www.tesla.com/solarroof" href1="https://www.tesla.com/energy/design?poi=solarroof" id="2third" src="/Homepage-Card-Solar-Roof-Desktop.avif" carType="Utility Truck" carName="Solar Roof" price="Generate Clean Energy With Your Roof" ></ScrollCard>
+          <ScrollCard href2="https://www.tesla.com/megapack" href1="https://www.youtube.com/watch?v=yn_6LC4loY8" id="2fourth" src="/Homepage-Card-Megapack-Desktop.avif" carType="Luxury SUV" carName="Megapack" price="Massive Batteries for Massive Energy Support" ></ScrollCard>
       </div>
     </>
   );

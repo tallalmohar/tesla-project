@@ -12,6 +12,62 @@ export default function Header() {
   function shopClick() {
     window.open("https://shop.tesla.com/");
   }
+  
+  const vehicleLinks = [
+  { name: "Help Me Choose", src: "https://www.tesla.com/choose" },
+  { name: "Demo Drive", src: "https://www.tesla.com/drive" },
+  { name: "Trade-in", src: "https://www.tesla.com/tradein" },
+  { name: "Compare", src: "https://www.tesla.com/compare" },
+  { name: "WorkShops", src: "https://www.tesla.com/workshops" },
+  { name: "Help Me Charge", src: "https://www.tesla.com/charge" },
+  { name: "Fleet", src: "https://www.tesla.com/fleet" },
+  { name: "Semi", src: "https://www.tesla.com/semi" },
+  { name: "Roadster", src: "https://www.tesla.com/roadster" },
+  { name: "Federal Tax Credit", src: "https://www.tesla.com/ev-incentives" },
+  { name: "We, Robot", src: "https://www.tesla.com/robot" },
+];
+
+const chargingLinks = [
+  { name: "Scedule a Consultation", src: "https://www.tesla.com/solar-virtual-consultations" },
+  { name: "Why Solar", src: "https://www.tesla.com/why-solar" },
+  { name: "Incentives", src: "https://www.tesla.com/support/energy/powerwall/learn/incentives" },
+  { name: "Support", src: "https://www.tesla.com/support/energy" },
+  { name: "Partener with Tesla", src: "https://www.tesla.com/partner-with-tesla" },
+  { name: "Commercial", src: "https://www.tesla.com/commercial" },
+  { name: "Utilities", src: "https://www.tesla.com/utilities" },
+];
+
+const energyLink = [
+  { name: "Help Me Charge", src: "https://www.tesla.com/help-me-charge" },
+  { name: "Charging Calculator", src: "https://www.tesla.com/charging-calculator" },
+  { name: "Charging with NACS", src: "https://www.tesla.com/NACS" },
+  { name: "Supercharger Voting", src: "https://www.tesla.com/supercharger-voting/overview" },
+  { name: "Host a Supercharger", src: "https://www.tesla.com/host-a-supercharger" },
+  { name: "Commercial Charging", src: "https://www.tesla.com/commercial-charging" },
+  { name: "Host Wall Connectors", src: "https://www.tesla.com/charging-partners" },
+];
+
+const discover1 = [
+  { name: "Demo Drive", src: "https://www.tesla.com/drive" },
+  { name: "Insurance", src: "https://www.tesla.com/insurance" },
+  { name: "American Heroes", src: "https://www.tesla.com/american-heroes" },
+  { name: "Learn", src: "https://www.tesla.com/learn" },
+  { name: "Video Guides", src: "www.tesla.com/support/videos" },
+  { name: "Customer Stories", src: "https://www.tesla.com/customer-stories" },
+  { name: "Events", src: "https://www.tesla.com/events" },
+  { name: "Workshops", src: "https://www.tesla.com/workshops" },
+];
+const discover3 = [
+  { name: "About", src: "https://www.tesla.com/about" },
+  { name: "Careers", src: "https://www.tesla.com/careers" },
+  { name: "Investor Relations", src: "https://ir.tesla.com/#quarterly-disclosure" },
+];
+const discover2 = [
+  { name: "Find Us", src: "https://www.tesla.com/findus?bounds=52.70122031185168%2C-64.3473379%2C21.542305545773416%2C-148.7223379" },
+  { name: "Find a Collision Center", src: "https://www.tesla.com/support/collision-support" },
+  { name: "Find a Collision Installer", src: "https://www.tesla.com/support/certified-installers" },
+];
+
   return (
     <>
       <div className="flex justify-between items-center h-15 pr-10">
@@ -102,43 +158,43 @@ export default function Header() {
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Model S</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://www.tesla.com/models">Learn</a> <a className="underline" href="https://www.tesla.com/models/design#overview">Order</a>
 					</div>
 					</div>
 				</div>
 				<div className="">
-					<Image alt="model s" src="/model3.avif" width={220} height={123}></Image>
+					<Image alt="model 3" src="/model3.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Model 3</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://www.tesla.com/model3-choose">Learn</a> <a className="underline" href="https://www.tesla.com/model3/design#overview">Order</a>
 					</div>
 					</div>
 				</div>
 				<div className="">
-					<Image alt="model s" src="/modely.avif" width={220} height={123}></Image>
+					<Image alt="model y" src="/modely.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Model Y</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://www.tesla.com/modely">Learn</a> <a className="underline" href="https://www.tesla.com/modely/design#overview">Order</a>
 					</div>
 					</div>
 				</div>
 				<div className="">
-					<Image alt="model s" src="/modelX.avif" width={220} height={123}></Image>
+					<Image alt="model x" src="/modelX.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Model X</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://www.tesla.com/modelx">Learn</a> <a className="underline" href="https://www.tesla.com/modelx/design#overview">Order</a>
 					</div>
 					</div>
 				</div>
 				<div className="">
-					<Image alt="model s" src="/cyberTruck.avif" width={220} height={123}></Image>
+					<Image alt="cybertruck" src="/cyberTruck.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Cybertruck</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://www.tesla.com/cybertruck">Learn</a> <a className="underline" href="https://www.tesla.com/cybertruck/design#overview">Order</a>
 					</div>
 					</div>
 				</div>
@@ -147,7 +203,7 @@ export default function Header() {
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Inventory</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://www.tesla.com/inventory/new/m3?PaymentType=cash">Learn</a> <a className="underline" href="https://www.tesla.com/inventory/used/my?PaymentType=cash">Order</a>
 					</div>
 					</div>
 				</div>
@@ -155,24 +211,12 @@ export default function Header() {
 			<div className="border-r"></div>
 			<div className="ml-10">
 				<ul>
-				{[
-				"Help Me Choose",
-				"Demo Drive",
-				"Trade-in",
-				"Compare",
-				"WorkShops",
-				"Help Me Charge",
-				"Fleet",
-				"Semi",
-				"Roadster",
-				"Federal Tax Credit",
-				"We, Robot",
-				].map((item) => (
-				<li key={item} className="pt-3 hover:underline font-bold text-sm">
-					<a href="#">{item}</a>
-				</li>
-				))}
-  			</ul>
+					{vehicleLinks.map((item) => (
+						<li key={item.name} className="pt-3 hover:underline font-bold text-sm">
+						<a href={item.src}>{item.name}</a>
+						</li>
+					))}
+					</ul>
 			</div>
 			</section>
 			</>
@@ -183,38 +227,38 @@ export default function Header() {
 			<section className="flex ">
 			<div className="flex gap-2 flex-row flex-wrap w-[721px] h-[367px]">
 				<div className="">
-					<Image alt="model s" src="/solar.avif" width={220} height={123}></Image>
+					<Image alt="solar panels" src="/solar.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Solar Panels</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://www.tesla.com/solarpanels">Learn</a> <a className="underline" href="https://www.tesla.com/energy/design?poi=solarpanels">Order</a>
 					</div>
 					</div>
 				</div>
 				<div className="">
-					<Image alt="model s" src="/solarRoof.avif" width={220} height={123}></Image>
+					<Image alt="solar roof" src="/solarRoof.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Solar Roof</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://www.tesla.com/solarroof">Learn</a> <a className="underline" href="https://www.tesla.com/energy/design?poi=solarroof">Order</a>
 					</div>
 					</div>
 				</div>
 				<div className="">
-					<Image alt="model s" src="/powerWall.avif" width={220} height={123}></Image>
+					<Image alt="power wall" src="/powerWall.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Powerwall</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://www.tesla.com/powerwall">Learn</a> <a className="underline" href="https://www.tesla.com/powerwall">Order</a>
 					</div>
 					</div>
 				</div>
 				<div className="">
-					<Image alt="model s" src="/mega.avif" width={220} height={123}></Image>
+					<Image alt="megapack" src="/mega.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Megapack</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a>
+					<a className="underline" href="https://www.tesla.com/megapack">Learn</a>
 					</div>
 					</div>
 				</div>
@@ -223,20 +267,12 @@ export default function Header() {
 			<div className="border-r"></div>
 			<div className="ml-10">
 				<ul>
-				{[
-				"Schedule a Consultation",
-				"Why Solar",
-				"Incentives",
-				"Support",
-				"Partner with Tesla",
-				"Commercial",
-				"Utilities"
-				].map((item) => (
-				<li key={item} className="pt-3 hover:underline font-bold text-sm">
-					<a href="#">{item}</a>
-				</li>
-				))}
-  			</ul>
+					{chargingLinks.map((item) => (
+						<li key={item.name} className="pt-3 hover:underline font-bold text-sm">
+						<a href={item.src}>{item.name}</a>
+						</li>
+					))}
+					</ul>
 			</div>
 			</section>
 			</>
@@ -247,29 +283,29 @@ export default function Header() {
 			<section className="flex ">
 			<div className="flex gap-2 flex-row flex-wrap w-[721px] h-[367px]">
 				<div className="">
-					<Image alt="model s" src="/charger1.avif" width={220} height={123}></Image>
+					<Image alt="Charging" src="/charger1.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
-					<h1 className="font-bold">Solar Panels</h1>
+					<h1 className="font-bold">Charging</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://www.tesla.com/charging">Learn</a> 
 					</div>
 					</div>
 				</div>
 				<div className="">
-					<Image alt="model s" src="/charger2.avif" width={220} height={123}></Image>
+					<Image alt="homecharger" src="/charger2.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
-					<h1 className="font-bold">Solar Roof</h1>
+					<h1 className="font-bold">Homecharging</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://www.tesla.com/home-charging">Learn</a> <a className="underline" href="https://shop.tesla.com/category/charging#charging.at-home">Order</a>
 					</div>
 					</div>
 				</div>
 				<div className="">
-					<Image alt="model s" src="/charger3.avif" width={220} height={123}></Image>
+					<Image alt="powerwall" src="/charger3.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
-					<h1 className="font-bold">Powerwall</h1>
+					<h1 className="font-bold">Supercharging</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://www.tesla.com/supercharger">Learn</a> <a className="underline" href="https://www.tesla.com/findus?bounds=52.70122031185168%2C-64.3473379%2C21.542305545773416%2C-148.7223379">Find</a>
 					</div>
 					</div>
 				</div>
@@ -278,21 +314,12 @@ export default function Header() {
 			<div className="border-r"></div>
 			<div className="ml-10">
 				<ul>
-				{[
-				"Help Me Charge",
-				"Charging Calculator",
-				"Charging with NACS",
-				"Supercharger Voting",
-				"Host a Supercharger",
-				"Commercial Charging",
-				"Host Wall Connector"
-				
-				].map((item) => (
-				<li key={item} className="pt-3 hover:underline font-bold text-sm">
-					<a href="#">{item}</a>
-				</li>
-				))}
-  			</ul>
+					{energyLink.map((item) => (
+						<li key={item.name} className="pt-3 hover:underline font-bold text-sm">
+						<a href={item.src}>{item.name}</a>
+						</li>
+					))}
+					</ul>
 			</div>
 			</section>
 			</>
@@ -301,55 +328,35 @@ export default function Header() {
 			<section className="flex">
 				
 			<div className="ml-10 mr-5">
-				<h1>Resources</h1>
+				<h1 className="text-gray-400">Resources</h1>
 				<ul>
-				{[
-				"Demo Drive",
-				"Insurance",
-				"American Heroes",
-				"Learn",
-				"Video Guides",
-				"Customer Stories",
-				"Events",
-				"Workshops"
-				
-				
-				].map((item) => (
-				<li key={item} className="pt-3 hover:underline font-bold text-sm">
-					<a href="#">{item}</a>
-				</li>
-				))}
-  			</ul>
+					{discover1.map((item) => (
+						<li key={item.name} className="pt-3 hover:underline font-bold text-sm">
+						<a href={item.src}>{item.name}</a>
+						</li>
+					))}
+					</ul>
 			</div>
 			
 			<div className="ml-10">
-				<h1>Location Services</h1>
+				<h1 className="text-gray-400">Location Services</h1>
 				<ul>
-				{[
-				"Find us",
-				"Find a Collision Center",
-				"Find a Certified Installer"
-				].map((item) => (
-				<li key={item} className="pt-3 hover:underline font-bold text-sm">
-					<a href="#">{item}</a>
-				</li>
-				))}
-  			</ul>
+					{discover2.map((item) => (
+						<li key={item.name} className="pt-3 hover:underline font-bold text-sm">
+						<a href={item.src}>{item.name}</a>
+						</li>
+					))}
+					</ul>
 			</div>
 			<div className="ml-10">
-				<h1>Company</h1>
+				<h1 className="text-gray-400">Company</h1>
 				<ul>
-				{[
-				"About",
-				"Careers",
-				"Investor Relations"
-				
-				].map((item) => (
-				<li key={item} className="pt-3 hover:underline font-bold text-sm">
-					<a href="#">{item}</a>
-				</li>
-				))}
-  			</ul>
+					{discover3.map((item) => (
+						<li key={item.name} className="pt-3 hover:underline font-bold text-sm">
+						<a href={item.src}>{item.name}</a>
+						</li>
+					))}
+					</ul>
 			</div>
 			</section>
 		)}
@@ -357,38 +364,38 @@ export default function Header() {
 			<section className="flex">
 				<div className="flex gap-2 flex-row flex-wrap w-[721px] h-[367px]">
 				<div className="">
-					<Image alt="model s" src="/charger2.avif" width={220} height={123}></Image>
+					<Image alt="Charging" src="/charger2.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Charging</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="shop.tesla.com/category/charging">Learn</a> 
 					</div>
 					</div>
 				</div>
 				<div className="">
-					<Image alt="model s" src="/tire.avif" width={220} height={123}></Image>
+					<Image alt="vehicles accessories" src="/tire.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Vehicle Accessories</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://shop.tesla.com/category/vehicle-accessories">Learn</a> 
 					</div>
 					</div>
 				</div>
 				<div className="">
-					<Image alt="model s" src="/cap.avif" width={220} height={123}></Image>
+					<Image alt="apparel" src="/cap.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Apparel</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://shop.tesla.com/category/apparel">Learn</a>
 					</div>
 					</div>
 				</div>
 				<div className="">
-					<Image alt="model s" src="/bagpack.avif" width={220} height={123}></Image>
+					<Image alt="lifestyles" src="/bagpack.avif" width={220} height={123}></Image>
 					<div className="flex items-center flex-col">
 					<h1 className="font-bold">Lifestyle</h1>
 					<div className="flex gap-3 text-xs text-gray-500">
-					<a className="underline" href="#">Learn</a> <a className="underline" href="#">Order</a>
+					<a className="underline" href="https://shop.tesla.com/category/lifestyle">Learn</a>
 					</div>
 					</div>
 				</div>
