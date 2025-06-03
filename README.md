@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tesla Homepage Clone
 
-## Getting Started
+A modern, responsive Tesla homepage built with Next.js and React, designed as a showcase project for the **Frontend Engineer, Applications Engineering (Fall 2025)** internship at Tesla.
 
-First, run the development server:
+## 🚗 Project Overview
+
+This project is a pixel-perfect recreation of Tesla’s homepage, featuring:
+
+- **Dynamic carousels** and horizontally scrollable product cards
+- **Interactive dropdown navigation** with React state management
+- **Reusable components** for scalability and maintainability
+- **Responsive design** using Tailwind CSS
+- **Embedded Google Maps** for Supercharger locations
+- **Accessibility best practices** and keyboard navigation
+- **Easter Egg:** Find the hidden Megapack button that links to a secret [YouTube video](https://www.youtube.com/watch?v=yn_6LC4loY8) 👀
+
+## 🛠️ Tech Stack
+
+- [Next.js](https://nextjs.org/) (App Router)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## 🚀 Getting Started
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/yourusername/tesla-homepage-clone.git
+cd teslafrontendproj
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the homepage.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Header Navigation:** Hover to reveal dropdowns for Vehicles, Energy, Charging, Discover, and Shop.
+- **Product Cards:** Scroll horizontally to explore Tesla’s lineup, including Model Y, Model 3, Cybertruck, and more.
+- **Info Boxes:** Highlight special offers and comparison tools.
+- **Supercharger Map:** Embedded Google Map showing Tesla locations and real-time stats.
+- **Footer:** Legal, privacy, and contact links.
 
-## Learn More
+## 🥚 Hidden Easter Egg
 
-To learn more about Next.js, take a look at the following resources:
+One of the Megapack product cards contains a hidden button that links to a fun [YouTube video](https://www.youtube.com/watch?v=yn_6LC4loY8). Can you find it?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📚 What I Learned
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Advanced React state management for UI interactivity
+- Building accessible, keyboard-navigable dropdowns
+- Responsive layouts with Tailwind CSS
+- Modularizing UI with reusable components
+- Integrating third-party embeds (Google Maps)
 
-## Deploy on Vercel
+## 🧑‍💻 About Me
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+I’m a software engineering student @ SFU and eager to apply my skills in real-world projects at Tesla. This project demonstrates my attention to detail, ability to work independently, and excitement for building innovative user experiences, this entire project was designed, developed, and deployed in **less than 48 hours**, demonstrating my ability to quickly learn, adapt, and deliver high-quality results under tight deadlines.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+**Thank you for reviewing my application!**
+
+> _“The best way to predict the future is to invent it.”_ – Alan Kay
+
+---
