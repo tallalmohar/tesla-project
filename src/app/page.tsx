@@ -80,6 +80,45 @@ export default function Home() {
 
         <InfoBox src="/Homepage-Grid-Compare.avif" title="American Heroes" p="$1,000 off for military, first responders, teachers and students." btnP="Learn More"></InfoBox>
       </div>
+
+      <div className=" m-10">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50441.79297264504!2d-121.95998209579747!3d37.469566576287754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc654f67bbf49%3A0x2d4f6c443c47fb25!2sTesla!5e1!3m2!1sen!2sca!4v1748905079786!5m2!1sen!2sca" width="1810" height="550" className="border-0 rounded-2xl w-full"  loading="lazy"></iframe>
+        <div className="mt-5 flex justify-between">
+          <div>
+          <h1 className="text-5xl font-bold ">Find Your Charge</h1>
+          <h2 className="text-xl text-gray-600">View the network of Tesla Superchargers and Destination Chargers available near you.</h2>
+          </div>
+          <div></div>
+          <div className="flex mr-10 items-center gap-4">
+            <div className="flex flex-col">
+              <div className="flex gap-1">
+                <h1 className="text-4xl font-bold">30,818</h1>
+                <img src="/superchargers.svg" width={40} height={40}></img>
+              </div>
+              <p className="text-xl text-gray-500 font-bold">Superchargers</p>
+            </div>
+            <div className="flex flex-col">
+            <div className="flex gap-1">
+              <h1 className="text-4xl font-bold ">10,412</h1>
+              <img src="/chargers.svg" width={40} height={40}></img>
+              
+              </div>
+              <p className="text-xl text-gray-500 font-bold">Destination Charger</p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-5 flex flex-row gap-3">
+            <a  href={currentItem.link} className=" flex justify-center w-[170px]  p-2 bg-black text-white rounded hover:cursor-pointer">Order Now</a>
+            <a className=" flex justify-center w-[170px]  p-2  bg-gray-200 rounded hover:cursor-pointer hover:bg-gray-100  ">View Inventory</a>
+          </div>
+      </div>
+
+      <div className="m-20 mr-0 ml-0 h-[580px] flex flex-row overflow-x-auto whitespace-nowrap no-scrollbar ">
+          <ScrollCard src="/Homepage-Card-Solar-Panels-Desktop.avif" carType="" carName="Solar Panels" price="Use Solar Energy to Power Your Home and Charge Your Tesla" ></ScrollCard>
+          <ScrollCard src="/Homepage-Card-Powerwall-Desktop.avif" carType="" carName="Powerwall" price="Keep Your Lights On During Outages" ></ScrollCard>
+          <ScrollCard src="/Homepage-Card-Solar-Roof-Desktop.avif" carType="Utility Truck" carName="Solar Roof" price="Generate Clean Energy With Your Roof" ></ScrollCard>
+          <ScrollCard src="/Homepage-Card-Megapack-Desktop.avif" carType="Luxury SUV" carName="Megapack" price="Massive Batteries for Massive Energy Support" ></ScrollCard>
+      </div>
     </>
   );
 }
