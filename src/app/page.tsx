@@ -113,7 +113,7 @@ export default function Home() {
           </div>
       </div>
 
-      <div className="m-20 mr-0 ml-0 h-[580px] flex flex-row overflow-x-auto whitespace-nowrap no-scrollbar ">
+      <div className="m-20 mb-4 mr-0 ml-0 h-[580px] flex flex-row overflow-x-auto whitespace-nowrap no-scrollbar ">
           <ScrollCard src="/Homepage-Card-Solar-Panels-Desktop.avif" carType="" carName="Solar Panels" price="Use Solar Energy to Power Your Home and Charge Your Tesla" ></ScrollCard>
           <ScrollCard src="/Homepage-Card-Powerwall-Desktop.avif" carType="" carName="Powerwall" price="Keep Your Lights On During Outages" ></ScrollCard>
           <ScrollCard src="/Homepage-Card-Solar-Roof-Desktop.avif" carType="Utility Truck" carName="Solar Roof" price="Generate Clean Energy With Your Roof" ></ScrollCard>
